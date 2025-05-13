@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Company profile website for PT. Perdana Adi Yuda",
   "private": true,
-  "homepage": "https://<username>.github.io/perdana-adi-yuda",
+  "homepage": "https://ImHeroesKiller.github.io/perdana",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
