@@ -3,496 +3,194 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PT. Perdana Adi Yuda - Jasa Pengelolaan Tenaga Kerja</title>
-  <meta name="description" content="Layanan penyedia tenaga kerja profesional dan berkualitas dari PT. Perdana Adi Yuda."/>
-  
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com "></script>
-
-  <!-- Animate On Scroll -->
-  <link href="https://unpkg.com/aos @2.3.4/dist/aos.css" rel="stylesheet">
-
-  <!-- Google Fonts -->
+  <title>PT. Perdana Adi Yuda</title>
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter :wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
-    }
-    .client-slider {
-      display: flex;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-    .client-slider::-webkit-scrollbar {
-      display: none;
-    }
-    .client-slide {
-      min-width: 150px;
-      height: 80px;
-      margin-right: 20px;
-      border-radius: 8px;
-      background-color: #f3f4f6;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: transform 0.3s ease;
-    }
-    .client-slide:hover {
-      transform: scale(1.05);
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    /* Animation for slider */
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
-    .animate-scroll {
-      animation: scroll 30s linear infinite;
-    }
-  </style>
+  <script src="https://unpkg.com/aos @2.3.4/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos @2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-white text-gray-800">
+<body>
 
   <!-- Language Switcher -->
-  <div class="text-right p-2">
-    <button onclick="switchLang('id')" class="mx-1 px-2 py-1 bg-blue-100 text-blue-700 rounded">ID</button>
-    <button onclick="switchLang('en')" class="mx-1 px-2 py-1 bg-blue-600 text-white rounded">EN</button>
+  <div class="lang-switch fixed top-4 right-4 z-50">
+    <button onclick="switchLang('id')" class="btn-lang active">ID</button>
+    <button onclick="switchLang('en')" class="btn-lang">EN</button>
   </div>
 
   <!-- Header -->
-  <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white shadow-lg">
-    <div class="container mx-auto px-6 py-4">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="text-xl md:text-2xl font-bold mb-4 md:mb-0">PT. Perdana Adi Yuda</div>
-        <nav class="flex space-x-6 text-sm md:text-base">
-          <a href="#services" class="hover:underline">Layanan</a>
-          <a href="#process" class="hover:underline">Proses</a>
-          <a href="#clients" class="hover:underline">Klien</a>
-          <a href="#contact" class="hover:underline">Kontak</a>
-        </nav>
-      </div>
+  <header class="bg-blue text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">PT. Perdana Adi Yuda</h1>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-blue-700 to-indigo-600 text-white py-16 px-6">
-    <div class="container mx-auto flex flex-col md:flex-row items-center">
-      <div data-aos="fade-up" class="md:w-1/2 mb-8 md:mb-0">
-        <h2 id="hero-title" class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-          Solusi Tenaga Kerja Profesional untuk Bisnis Anda
-        </h2>
-        <p id="hero-desc" class="text-lg mb-6 opacity-90">
-          Kami memberikan layanan penyedia tenaga kerja terpadu, profesional, dan berkualitas sesuai kebutuhan perusahaan Anda.
-        </p>
-        <a href="#contact" class="bg-white hover:bg-gray-100 text-blue-700 px-6 py-3 rounded-md transition duration-300 inline-block font-semibold">
-          Hubungi Kami
-        </a>
-      </div>
-      <div data-aos="zoom-in" class="md:w-1/2">
-        <img
-          src="https://picsum.photos/id/1015/600/400 "
-          alt="Tenaga Kerja Profesional"
-          class="rounded-lg shadow-lg w-full max-w-md mx-auto"
-        />
+  <!-- Hero -->
+  <section id="hero" class="hero bg-gradient-to-r from-blue-700 to-indigo-600 text-white py-16 px-6 text-center">
+    <div class="container mx-auto">
+      <h2 id="hero-title" class="text-2xl md:text-3xl font-bold mb-4"></h2>
+      <p id="hero-desc" class="text-sm md:text-base mb-6 max-w-lg mx-auto"></p>
+      <a href="#contact" class="btn-primary">Hubungi Kami</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-10 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 id="company-title" class="text-2xl font-semibold text-center mb-6"></h2>
+      <p id="company-desc" class="text-gray-700 text-center max-w-2xl mx-auto"></p>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section id="vision" class="py-10 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 id="vision-title" class="text-2xl font-semibold text-center mb-6"></h2>
+      <div class="flex flex-col gap-6">
+        <div>
+          <h3 id="vision-subtitle" class="font-semibold text-lg mb-3"></h3>
+          <ul id="vision-list" class="list-disc ml-5 text-gray-700 space-y-1"></ul>
+        </div>
+        <div>
+          <h3 id="mission-subtitle" class="font-semibold text-lg mb-3"></h3>
+          <ul id="mission-list" class="list-disc ml-5 text-gray-700 space-y-1"></ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Services Tabs -->
-  <section id="services" class="py-16 bg-white px-6">
-    <div class="container mx-auto">
-      <h2 id="service-title" class="text-3xl font-semibold text-center mb-10">Layanan Kami</h2>
-      <div class="flex flex-wrap justify-center mb-6 space-x-0 md:space-x-4 space-y-2 md:space-y-0">
-        <button onclick="showService('business')" class="service-tab active:bg-blue-600 bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition w-full md:w-auto">Business Support</button>
-        <button onclick="showService('recruitment')" class="service-tab bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition w-full md:w-auto">Recruitment</button>
-        <button onclick="showService('training')" class="service-tab bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition w-full md:w-auto">Training</button>
-        <button onclick="showService('event')" class="service-tab bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition w-full md:w-auto">Event Management</button>
+  <section id="services" class="py-10 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 id="service-title" class="text-2xl font-semibold text-center mb-6"></h2>
+      <div class="tabs flex flex-wrap justify-center gap-2 mb-6">
+        <button onclick="showService('business')" class="tab-btn active:bg-blue-600 bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-full transition w-full md:w-auto">Business Support</button>
+        <button onclick="showService('recruitment')" class="tab-btn bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-full transition w-full md:w-auto">Recruitment</button>
+        <button onclick="showService('training')" class="tab-btn bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-full transition w-full md:w-auto">Training</button>
+        <button onclick="showService('event')" class="tab-btn bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-full transition w-full md:w-auto">Event Management</button>
       </div>
-
-      <div id="service-content" class="bg-gray-50 p-6 rounded-lg shadow-md mt-4">
-        <!-- Business Support -->
+      <div id="service-content" class="bg-gray-50 p-5 rounded-lg shadow mt-4">
         <div id="business" class="service-detail">
-          <h3 id="business-title" class="text-xl font-semibold mb-3">Business Support</h3>
-          <p id="business-desc" class="mb-4">
-            Kami menyediakan SDM terbaik dan berpengalaman di bidangnya melalui proses rekrutmen dan seleksi yang cepat untuk mendukung operasional bisnis Anda.
-          </p>
-          <ul id="business-list" class="list-disc ml-6 space-y-1 text-gray-700">
-            <li>Komunikasi Pemasaran</li>
-            <li>Sales Force</li>
-            <li>Staff Perkantoran</li>
-            <li>Staff Forwarding</li>
-            <li>Staff Administrasi</li>
-            <li>Receptionist</li>
-            <li>Driver</li>
-            <li>DLL</li>
-          </ul>
+          <h3 id="business-title" class="font-semibold text-lg mb-2"></h3>
+          <p id="business-desc" class="mb-4"></p>
+          <ul id="business-list" class="list-disc ml-5 text-gray-700 space-y-1"></ul>
         </div>
-
-        <!-- Recruitment -->
         <div id="recruitment" class="service-detail hidden">
-          <h3 id="recruitment-title" class="text-xl font-semibold mb-3">Recruitment</h3>
-          <p id="recruitment-desc" class="mb-4">
-            Fokus pada pencarian karyawan untuk posisi non-management guna membantu perusahaan menjalankan aturan dan prosedur internal.
-          </p>
-          <ul id="recruitment-list" class="list-disc ml-6 space-y-1 text-gray-700">
-            <li>Identifikasi kebutuhan posisi</li>
-            <li>Membuat strategi perekrutan</li>
-            <li>Publikasi lowongan pekerjaan</li>
-            <li>Screening, Test & Interview</li>
-            <li>Shortlist & Offering</li>
-          </ul>
+          <h3 id="recruitment-title" class="font-semibold text-lg mb-2"></h3>
+          <p id="recruitment-desc" class="mb-4"></p>
+          <ul id="recruitment-list" class="list-disc ml-5 text-gray-700 space-y-1"></ul>
         </div>
-
-        <!-- Training -->
         <div id="training" class="service-detail hidden">
-          <h3 id="training-title" class="text-xl font-semibold mb-3">Training</h3>
-          <p id="training-desc" class="mb-4">
-            Menyediakan program pelatihan untuk membangun dan mengembangkan bakat tim Anda dengan instruktur kompeten.
-          </p>
-          <ul id="training-list" class="list-disc ml-6 space-y-1 text-gray-700">
-            <li>Inhouse / Exhouse Training</li>
-            <li>Training Skill & Motivation</li>
-            <li>Supervisory Management</li>
-            <li>Outdoor Training (Outbond)</li>
-            <li>Employee Gathering</li>
-          </ul>
+          <h3 id="training-title" class="font-semibold text-lg mb-2"></h3>
+          <p id="training-desc" class="mb-4"></p>
+          <ul id="training-list" class="list-disc ml-5 text-gray-700 space-y-1"></ul>
         </div>
-
-        <!-- Event Management -->
         <div id="event" class="service-detail hidden">
-          <h3 id="event-title" class="text-xl font-semibold mb-3">Event Management</h3>
-          <p id="event-desc" class="mb-4">
-            Merancang dan melaksanakan setiap event Anda dengan dedikasi tinggi untuk menciptakan pengalaman luar biasa bagi peserta.
-          </p>
-          <ul id="event-list" class="list-disc ml-6 space-y-1 text-gray-700">
-            <li>MICE (Meeting, Incentive, Convention, Exhibition)</li>
-            <li>Brand Activation</li>
-            <li>Product Launching</li>
-            <li>Gathering</li>
-            <li>Sales Promotion Girl/Boy</li>
-            <li>Field of Officer Boy</li>
-          </ul>
+          <h3 id="event-title" class="font-semibold text-lg mb-2"></h3>
+          <p id="event-desc" class="mb-4"></p>
+          <ul id="event-list" class="list-disc ml-5 text-gray-700 space-y-1"></ul>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Our Process -->
-  <section id="process" class="py-16 bg-gray-100 px-6">
-    <div class="container mx-auto">
-      <h2 id="process-title" class="text-3xl font-semibold text-center mb-4">Proses Kami</h2>
-      <p id="process-subtitle" class="text-center text-gray-600 mb-10 max-w-xl mx-auto">
-        Proses kerja kami dilakukan secara sistematis untuk memastikan kualitas layanan terbaik.
-      </p>
-
+  <section id="process" class="py-10 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 id="process-title" class="text-2xl font-semibold text-center mb-4"></h2>
+      <p id="process-subtitle" class="text-center text-gray-600 mb-6"></p>
       <div class="relative">
-        <div class="absolute left-6 top-0 bottom-0 w-1 bg-blue-400 hidden md:block"></div>
-
-        <div data-aos="fade-left" class="mb-10 md:ml-16 relative">
-          <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
-            <span class="absolute -left-10 top-6 bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">1</span>
-            <h3 id="step1-title" class="text-xl font-semibold mb-2">Recruitment & Assessment</h3>
-            <p id="step1-desc">Identifikasi kebutuhan tenaga kerja dan evaluasi calon pelamar melalui seleksi kompetensi.</p>
+        <div class="absolute left-2 top-0 bottom-0 w-1 bg-blue-400"></div>
+        <div data-aos="fade-left" class="step relative pl-8 pb-8">
+          <span class="step-number absolute -left-3 top-0 bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full">1</span>
+          <div class="step-content bg-white p-4 rounded shadow border-l-4 border-blue-500">
+            <h3 id="step1-title" class="font-semibold mb-1"></h3>
+            <p id="step1-desc"></p>
           </div>
         </div>
-
-        <div data-aos="fade-left" class="mb-10 md:ml-16 relative">
-          <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
-            <span class="absolute -left-10 top-6 bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">2</span>
-            <h3 id="step2-title" class="text-xl font-semibold mb-2">Training</h3>
-            <p id="step2-desc">Kami memberikan pelatihan awal untuk mempersiapkan SDM sesuai standar perusahaan mitra.</p>
+        <div data-aos="fade-left" class="step relative pl-8 pb-8">
+          <span class="step-number absolute -left-3 top-0 bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full">2</span>
+          <div class="step-content bg-white p-4 rounded shadow border-l-4 border-blue-500">
+            <h3 id="step2-title" class="font-semibold mb-1"></h3>
+            <p id="step2-desc"></p>
           </div>
         </div>
-
-        <div data-aos="fade-left" class="mb-10 md:ml-16 relative">
-          <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
-            <span class="absolute -left-10 top-6 bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">3</span>
-            <h3 id="step3-title" class="text-xl font-semibold mb-2">Placement & Service Delivery</h3>
-            <p id="step3-desc">Penempatan tenaga kerja sesuai kebutuhan dan penyerahan laporan hasil seleksi kepada klien.</p>
+        <div data-aos="fade-left" class="step relative pl-8 pb-8">
+          <span class="step-number absolute -left-3 top-0 bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full">3</span>
+          <div class="step-content bg-white p-4 rounded shadow border-l-4 border-blue-500">
+            <h3 id="step3-title" class="font-semibold mb-1"></h3>
+            <p id="step3-desc"></p>
           </div>
         </div>
-
-        <div data-aos="fade-left" class="mb-10 md:ml-16 relative">
-          <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
-            <span class="absolute -left-10 top-6 bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">4</span>
-            <h3 id="step4-title" class="text-xl font-semibold mb-2">Mentoring</h3>
-            <p id="step4-desc">Pendampingan selama masa adaptasi untuk memastikan pekerjaan berjalan lancar.</p>
+        <div data-aos="fade-left" class="step relative pl-8 pb-8">
+          <span class="step-number absolute -left-3 top-0 bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full">4</span>
+          <div class="step-content bg-white p-4 rounded shadow border-l-4 border-blue-500">
+            <h3 id="step4-title" class="font-semibold mb-1"></h3>
+            <p id="step4-desc"></p>
           </div>
         </div>
-
-        <div data-aos="fade-left" class="mb-10 md:ml-16 relative">
-          <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
-            <span class="absolute -left-10 top-6 bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">5</span>
-            <h3 id="step5-title" class="text-xl font-semibold mb-2">Development</h3>
-            <p id="step5-desc">Pengembangan skill dan kapasitas tenaga kerja untuk meningkatkan produktivitas jangka panjang.</p>
+        <div data-aos="fade-left" class="step relative pl-8 pb-8">
+          <span class="step-number absolute -left-3 top-0 bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full">5</span>
+          <div class="step-content bg-white p-4 rounded shadow border-l-4 border-blue-500">
+            <h3 id="step5-title" class="font-semibold mb-1"></h3>
+            <p id="step5-desc"></p>
           </div>
         </div>
-
-        <div data-aos="fade-left" class="mb-10 md:ml-16 relative">
-          <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
-            <span class="absolute -left-10 top-6 bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">6</span>
-            <h3 id="step6-title" class="text-xl font-semibold mb-2">Performance Evaluation</h3>
-            <p id="step6-desc">Evaluasi berkala terhadap kinerja tenaga kerja untuk menjamin kualitas layanan tetap tinggi.</p>
+        <div data-aos="fade-left" class="step relative pl-8 pb-8">
+          <span class="step-number absolute -left-3 top-0 bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full">6</span>
+          <div class="step-content bg-white p-4 rounded shadow border-l-4 border-blue-500">
+            <h3 id="step6-title" class="font-semibold mb-1"></h3>
+            <p id="step6-desc"></p>
           </div>
         </div>
-
-        <div data-aos="fade-left" class="mb-10 md:ml-16 relative">
-          <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
-            <span class="absolute -left-10 top-6 bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">7</span>
-            <h3 id="step7-title" class="text-xl font-semibold mb-2">Termination or Renewal</h3>
-            <p id="step7-desc">Kami tawarkan opsi pembaruan kontrak atau pengakhiran kerjasama sesuai kebutuhan klien.</p>
+        <div data-aos="fade-left" class="step relative pl-8 pb-8">
+          <span class="step-number absolute -left-3 top-0 bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full">7</span>
+          <div class="step-content bg-white p-4 rounded shadow border-l-4 border-blue-500">
+            <h3 id="step7-title" class="font-semibold mb-1"></h3>
+            <p id="step7-desc"></p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Clients Slider -->
-  <section id="clients" class="py-16 bg-white px-6">
-    <div class="container mx-auto">
-      <h2 id="client-title" class="text-3xl font-semibold text-center mb-6">Klien & Event Kami</h2>
-      <p id="client-desc" class="text-center text-gray-600 mb-6">Beberapa mitra yang telah mempercayakan kebutuhan SDM kepada kami.</p>
-      <div class="client-slider overflow-hidden whitespace-nowrap animate-scroll">
-        <div class="client-slide inline-block">HKTI</div>
-        <div class="client-slide inline-block"><img src="https://picsum.photos/id/1011/150/80 " alt="Client 1" class="w-full h-full object-cover"></div>
-        <div class="client-slide inline-block"><img src="https://picsum.photos/id/1012/150/80 " alt="Client 2" class="w-full h-full object-cover"></div>
-        <div class="client-slide inline-block"><img src="https://picsum.photos/id/1013/150/80 " alt="Client 3" class="w-full h-full object-cover"></div>
-        <div class="client-slide inline-block"><img src="https://picsum.photos/id/1014/150/80 " alt="Client 4" class="w-full h-full object-cover"></div>
+  <!-- Clients -->
+  <section id="clients" class="py-10 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 id="client-title" class="text-2xl font-semibold text-center mb-4"></h2>
+      <p id="client-desc" class="text-center text-gray-600 mb-6"></p>
+      <div class="client-slider overflow-x-scroll whitespace-nowrap animate-scroll">
+        <div class="client-slide inline-block mr-4">HKTI</div>
+        <div class="client-slide inline-block mr-4"><img src="https://picsum.photos/id/1011/150/80 " alt="Client 1" class="w-full h-full object-cover"></div>
+        <div class="client-slide inline-block mr-4"><img src="https://picsum.photos/id/1012/150/80 " alt="Client 2" class="w-full h-full object-cover"></div>
+        <div class="client-slide inline-block mr-4"><img src="https://picsum.photos/id/1013/150/80 " alt="Client 3" class="w-full h-full object-cover"></div>
+        <div class="client-slide inline-block mr-4"><img src="https://picsum.photos/id/1014/150/80 " alt="Client 4" class="w-full h-full object-cover"></div>
         <div class="client-slide inline-block">IFW</div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-16 bg-gray-100 px-6">
-    <div class="container mx-auto">
-      <h2 id="contact-title" class="text-3xl font-semibold text-center mb-10">Kontak Kami</h2>
-      <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h3 id="contact-subtitle" class="text-xl font-semibold mb-4">Hubungi Kami</h3>
-            <p id="address-label"><strong>Alamat:</strong> Plaza Summarecon Bekasi Lt. 7 Jl. Ahmad Yani Bulevar, Sentra Summarecon - Bekasi</p>
-            <p id="phone-label"><strong>Telepon:</strong> +62 852 7222 2277</p>
-            <p id="email-label"><strong>Email:</strong> admin@perdana.co.id</p>
-            <p class="mt-4 text-sm text-gray-600" id="contact-info">Silakan isi form di samping untuk menghubungi kami.</p>
-          </div>
-          <div>
-            <iframe 
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfYOUR_FORM_ID/viewform?embedded=true " 
-              width="100%" 
-              height="400" 
-              frameborder="0" 
-              marginheight="0" 
-              marginwidth="0"
-              class="rounded-lg"
-            >Loading…</iframe>
-          </div>
+  <section id="contact" class="py-10 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 id="contact-title" class="text-2xl font-semibold text-center mb-6"></h2>
+      <div class="bg-white p-6 rounded shadow">
+        <div class="space-y-4">
+          <div><strong id="address-label"></strong></div>
+          <div><strong id="phone-label"></strong></div>
+          <div><strong id="email-label"></strong></div>
+          <p id="contact-info"></p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gradient-to-r from-blue-800 to-blue-600 text-white p-6 text-center">
-    <p>&copy; 2025 PT. Perdana Adi Yuda. All rights reserved.</p>
-    <p class="text-sm mt-2">Plaza Summarecon Bekasi Lt. 7, Jl. Ahmad Yani Bulevar, Sentra Summarecon - Bekasi</p>
+  <footer class="bg-blue text-white p-4 text-center">
+    <p id="footer-copyright"></p>
+    <p class="text-sm mt-1" id="footer-address"></p>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    function switchLang(lang) {
-      const translations = {
-        id: {
-          "hero-title": "Solusi Tenaga Kerja Profesional untuk Bisnis Anda",
-          "hero-desc": "Kami memberikan layanan penyedia tenaga kerja terpadu, profesional, dan berkualitas sesuai kebutuhan perusahaan Anda.",
-          "service-title": "Layanan Kami",
-          "business-title": "Business Support",
-          "business-desc": "Kami menyediakan SDM terbaik dan berpengalaman di bidangnya melalui proses rekrutmen dan seleksi yang cepat untuk mendukung operasional bisnis Anda.",
-          "business-list": [
-            "Komunikasi Pemasaran", "Sales Force", "Staff Perkantoran", "Staff Forwarding",
-            "Staff Administrasi", "Receptionist", "Driver", "DLL"
-          ],
-          "recruitment-title": "Recruitment",
-          "recruitment-desc": "Fokus pada pencarian karyawan untuk posisi non-management guna membantu perusahaan menjalankan aturan dan prosedur internal.",
-          "recruitment-list": [
-            "Identifikasi kebutuhan posisi", "Membuat strategi perekrutan",
-            "Publikasi lowongan pekerjaan", "Screening, Test & Interview", "Shortlist & Offering"
-          ],
-          "training-title": "Training",
-          "training-desc": "Menyediakan program pelatihan untuk membangun dan mengembangkan bakat tim Anda dengan instruktur kompeten.",
-          "training-list": [
-            "Inhouse / Exhouse Training", "Training Skill & Motivation", "Supervisory Management",
-            "Outdoor Training (Outbond)", "Employee Gathering"
-          ],
-          "event-title": "Event Management",
-          "event-desc": "Merancang dan melaksanakan setiap event Anda dengan dedikasi tinggi untuk menciptakan pengalaman luar biasa bagi peserta.",
-          "event-list": [
-            "MICE (Meeting, Incentive, Convention, Exhibition)",
-            "Brand Activation", "Product Launching", "Gathering",
-            "Sales Promotion Girl/Boy", "Field of Officer Boy"
-          ],
-          "process-title": "Proses Kami",
-          "process-subtitle": "Proses kerja kami dilakukan secara sistematis untuk memastikan kualitas layanan terbaik.",
-          "step1-title": "Recruitment & Assessment",
-          "step1-desc": "Identifikasi kebutuhan tenaga kerja dan evaluasi calon pelamar melalui seleksi kompetensi.",
-          "step2-title": "Training",
-          "step2-desc": "Pelatihan awal untuk mempersiapkan SDM sesuai standar perusahaan mitra.",
-          "step3-title": "Placement & Service Delivery",
-          "step3-desc": "Penempatan tenaga kerja sesuai kebutuhan dan penyerahan laporan hasil seleksi kepada klien.",
-          "step4-title": "Mentoring",
-          "step4-desc": "Pendampingan selama masa adaptasi untuk memastikan pekerjaan berjalan lancar.",
-          "step5-title": "Development",
-          "step5-desc": "Pengembangan skill dan kapasitas tenaga kerja untuk meningkatkan produktivitas jangka panjang.",
-          "step6-title": "Performance Evaluation",
-          "step6-desc": "Evaluasi berkala terhadap kinerja tenaga kerja untuk menjamin kualitas layanan tetap tinggi.",
-          "step7-title": "Termination or Renewal",
-          "step7-desc": "Opsi pembaruan kontrak atau pengakhiran kerjasama sesuai kebutuhan klien.",
-          "client-title": "Klien & Event Kami",
-          "client-desc": "Beberapa mitra yang telah mempercayakan kebutuhan SDM kepada kami.",
-          "contact-title": "Kontak Kami",
-          "contact-subtitle": "Hubungi Kami",
-          "address-label": "<strong>Alamat:</strong> Plaza Summarecon Bekasi Lt. 7 Jl. Ahmad Yani Bulevar, Sentra Summarecon - Bekasi",
-          "phone-label": "<strong>Telepon:</strong> +62 852 7222 2277",
-          "email-label": "<strong>Email:</strong> admin@perdana.co.id",
-          "contact-info": "Silakan isi form di samping untuk menghubungi kami."
-        },
-        en: {
-          "hero-title": "Professional Workforce Solutions for Your Business",
-          "hero-desc": "We provide integrated, professional and quality manpower services tailored to your company's needs.",
-          "service-title": "Our Services",
-          "business-title": "Business Support",
-          "business-desc": "We provide the best and experienced human resources through a fast recruitment and selection process to support your business operations.",
-          "business-list": [
-            "Marketing Communication", "Sales Force", "Office Staff", "Forwarding Staff",
-            "Administrative Staff", "Receptionist", "Driver", "Others"
-          ],
-          "recruitment-title": "Recruitment",
-          "recruitment-desc": "Focus on finding employees for non-management positions to help companies run existing rules and procedures.",
-          "recruitment-list": [
-            "Position Requirement Identification", "Recruitment Strategy Creation",
-            "Job Posting Publication", "Screening, Testing & Interview", "Shortlist & Offering"
-          ],
-          "training-title": "Training",
-          "training-desc": "We offer various training programs to build and develop your team's talent with competent instructors.",
-          "training-list": [
-            "Inhouse/Exhouse Training", "Skill & Motivation Training", "Supervisory Management",
-            "Outdoor Training", "Employee Gathering"
-          ],
-          "event-title": "Event Management",
-          "event-desc": "We design and execute every event with expertise and dedication, creating an exceptional experience for all participants.",
-          "event-list": [
-            "MICE (Meeting, Incentive, Convention, Exhibition)",
-            "Brand Activation", "Product Launching", "Gathering",
-            "Sales Promotion Girl/Boy", "Field Officer Boy"
-          ],
-          "process-title": "Our Process",
-          "process-subtitle": "Our work process is carried out systematically to ensure the best service quality.",
-          "step1-title": "Recruitment & Assessment",
-          "step1-desc": "Identify workforce needs and evaluate applicants through competency selection.",
-          "step2-title": "Training",
-          "step2-desc": "Initial training to prepare HR according to partner company standards.",
-          "step3-title": "Placement & Service Delivery",
-          "step3-desc": "Placement of workers according to client needs and submission of selection reports.",
-          "step4-title": "Mentoring",
-          "step4-desc": "Accompanied during the adaptation period to ensure smooth work.",
-          "step5-title": "Development",
-          "step5-desc": "Develop skills and capacity of workers to improve long-term productivity.",
-          "step6-title": "Performance Evaluation",
-          "step6-desc": "Periodic evaluation of worker performance to ensure consistent service quality.",
-          "step7-title": "Termination or Renewal",
-          "step7-desc": "Offer contract renewal options or termination as needed.",
-          "client-title": "Our Clients",
-          "client-desc": "Some partners who have trusted us with their workforce needs.",
-          "contact-title": "Contact Us",
-          "contact-subtitle": "Contact Us",
-          "address-label": "<strong>Address:</strong> Plaza Summarecon Bekasi Floor 7, Jl. Ahmad Yani Bulevar, Sentra Summarecon - Bekasi",
-          "phone-label": "<strong>Phone:</strong> +62 852 7222 2277",
-          "email-label": "<strong>Email:</strong> admin@perdana.co.id",
-          "contact-info": "Please fill out the form next to contact us."
-        }
-      };
-
-      document.getElementById("hero-title").textContent = translations[lang]["hero-title"];
-      document.getElementById("hero-desc").textContent = translations[lang]["hero-desc"];
-      document.getElementById("service-title").textContent = translations[lang]["service-title"];
-
-      // Business
-      document.getElementById("business-title").textContent = translations[lang]["business-title"];
-      document.getElementById("business-desc").textContent = translations[lang]["business-desc"];
-      document.getElementById("business-list").innerHTML = translations[lang]["business-list"].map(i => `<li>${i}</li>`).join("");
-
-      // Recruitment
-      document.getElementById("recruitment-title").textContent = translations[lang]["recruitment-title"];
-      document.getElementById("recruitment-desc").textContent = translations[lang]["recruitment-desc"];
-      document.getElementById("recruitment-list").innerHTML = translations[lang]["recruitment-list"].map(i => `<li>${i}</li>`).join("");
-
-      // Training
-      document.getElementById("training-title").textContent = translations[lang]["training-title"];
-      document.getElementById("training-desc").textContent = translations[lang]["training-desc"];
-      document.getElementById("training-list").innerHTML = translations[lang]["training-list"].map(i => `<li>${i}</li>`).join("");
-
-      // Event
-      document.getElementById("event-title").textContent = translations[lang]["event-title"];
-      document.getElementById("event-desc").textContent = translations[lang]["event-desc"];
-      document.getElementById("event-list").innerHTML = translations[lang]["event-list"].map(i => `<li>${i}</li>`).join("");
-
-      // Process
-      document.getElementById("process-title").textContent = translations[lang]["process-title"];
-      document.getElementById("process-subtitle").textContent = translations[lang]["process-subtitle"];
-      document.getElementById("step1-title").textContent = translations[lang]["step1-title"];
-      document.getElementById("step1-desc").textContent = translations[lang]["step1-desc"];
-      document.getElementById("step2-title").textContent = translations[lang]["step2-title"];
-      document.getElementById("step2-desc").textContent = translations[lang]["step2-desc"];
-      document.getElementById("step3-title").textContent = translations[lang]["step3-title"];
-      document.getElementById("step3-desc").textContent = translations[lang]["step3-desc"];
-      document.getElementById("step4-title").textContent = translations[lang]["step4-title"];
-      document.getElementById("step4-desc").textContent = translations[lang]["step4-desc"];
-      document.getElementById("step5-title").textContent = translations[lang]["step5-title"];
-      document.getElementById("step5-desc").textContent = translations[lang]["step5-desc"];
-      document.getElementById("step6-title").textContent = translations[lang]["step6-title"];
-      document.getElementById("step6-desc").textContent = translations[lang]["step6-desc"];
-      document.getElementById("step7-title").textContent = translations[lang]["step7-title"];
-      document.getElementById("step7-desc").textContent = translations[lang]["step7-desc"];
-
-      // Client
-      document.getElementById("client-title").textContent = translations[lang]["client-title"];
-      document.getElementById("client-desc").textContent = translations[lang]["client-desc"];
-
-      // Contact
-      document.getElementById("contact-title").textContent = translations[lang]["contact-title"];
-      document.getElementById("contact-subtitle").textContent = translations[lang]["contact-subtitle"];
-      document.getElementById("address-label").innerHTML = translations[lang]["address-label"];
-      document.getElementById("phone-label").innerHTML = translations[lang]["phone-label"];
-      document.getElementById("email-label").innerHTML = translations[lang]["email-label"];
-      document.getElementById("contact-info").textContent = translations[lang]["contact-info"];
-    }
-
-    function showService(id) {
-      const contents = document.querySelectorAll('.service-detail');
-      contents.forEach(content => content.classList.add('hidden'));
-      document.getElementById(id).classList.remove('hidden');
-
-      const buttons = document.querySelectorAll('.service-tab');
-      buttons.forEach(btn => btn.classList.remove('bg-blue-600'));
-      event.currentTarget.classList.add('bg-blue-600');
-    }
-
-    // AOS Init
-    AOS.init();
-  </script>
-
-  <!-- Animate On Scroll JS -->
-  <script src="https://unpkg.com/aos @2.3.4/dist/aos.js"></script>
-  <script>AOS.init();</script>
-
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
