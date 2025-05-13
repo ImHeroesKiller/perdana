@@ -5,215 +5,221 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PT. Perdana Adi Yuda</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter :wght@400;600&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/aos @2.3.4/dist/aos.js"></script>
   <link href="https://unpkg.com/aos @2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Language Switcher -->
-  <div class="lang-switch">
-    <button onclick="switchLang('id')" class="btn-lang active">ID</button>
-    <button onclick="switchLang('en')" class="btn-lang">EN</button>
-  </div>
-
   <!-- Header -->
-  <header>
-    <div class="container">
-      <h1>PT. Perdana Adi Yuda</h1>
+  <header class="bg-blue text-white p-6 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl md:text-2xl font-bold">PT. Perdana Adi Yuda</h1>
+      <nav class="space-x-4 hidden md:flex">
+        <a href="#about" class="hover:underline">Tentang</a>
+        <a href="#services" class="hover:underline">Layanan</a>
+        <a href="#process" class="hover:underline">Proses</a>
+        <a href="#clients" class="hover:underline">Klien</a>
+        <a href="#contact" class="hover:underline">Kontak</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="container text-center">
-      <h2 id="hero-title">Solusi Tenaga Kerja Profesional untuk Bisnis Anda</h2>
-      <p id="hero-desc">Kami memberikan layanan penyedia tenaga kerja terpadu, profesional, dan berkualitas sesuai kebutuhan perusahaan Anda.</p>
+  <!-- Hero -->
+  <section id="hero" class="hero bg-gradient-to-r from-blue-700 to-indigo-600 text-white py-20 px-6 text-center">
+    <div class="container mx-auto">
+      <h2 id="hero-title" class="text-4xl font-bold mb-4"></h2>
+      <p id="hero-desc" class="text-lg mb-6 max-w-2xl mx-auto"></p>
       <a href="#contact" class="btn-primary">Hubungi Kami</a>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2 id="company-title">Tentang Kami</h2>
-      <p id="company-desc">PT. Perdana Adi Yuda (PERDANA) merupakan perusahaan yang didirikan dan mulai beroperasi pada tahun 2022. Meski terbilang baru, PERDANA sudah memiliki pengalaman dalam bidang jasa pengelolaan tenaga kerja dan pekerjaan yang bersifat kegiatan pendukung lainnya.</p>
+  <!-- About -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 id="company-title" class="text-3xl font-semibold text-center mb-10"></h2>
+      <p id="company-desc" class="max-w-3xl mx-auto text-gray-700 text-center"></p>
     </div>
   </section>
 
-  <!-- Vision & Mission Section -->
-  <section id="vision">
-    <div class="container">
-      <h2 id="vision-title">Visi & Misi</h2>
-      <div class="vision-mission-section">
+  <!-- Vision & Mission -->
+  <section id="vision" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 id="vision-title" class="text-3xl font-semibold text-center mb-10"></h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <h3 id="vision-subtitle">Visi</h3>
-          <ul id="vision-list">
-            <li>Menjadi Perusahaan Penyedia Jasa Tenaga Kerja yang terpercaya dan dipilih dalam memberikan solusi dalam bidang Jasa Alih Daya.</li>
-            <li>Memberikan kepuasan bagi pengguna jasa dalam hal efesiensi dan produktifitas.</li>
-            <li>Memberikan pelayanan unggul dalam penyediaan tenaga kerja dan kegiatan usaha yang selaras dan sesuai dengan kebutuhan pelanggan.</li>
-            <li>Menyiapkan dan mengembangkan Tenaga kerja yang memiliki integritas, andal dan profesional.</li>
-          </ul>
+          <h3 id="vision-subtitle" class="text-xl font-semibold mb-4"></h3>
+          <ul id="vision-list" class="list-disc ml-5 text-gray-700 space-y-2"></ul>
         </div>
         <div>
-          <h3 id="mission-subtitle">Misi</h3>
-          <ul id="mission-list">
-            <li>Menjadi mitra terpercaya dalam bidang pemenuhan tenaga kerja dan kegiatan usaha yang sesuai dengan kebutuhan pelanggan.</li>
-            <li>Memberikan kepuasan bagi pengguna jasa dalam hal efesiensi dan produktifitas.</li>
-            <li>Memberikan pelayanan unggul dalam penyediaan tenaga kerja dan kegiatan usaha yang selaras dan sesuai dengan kebutuhan pelanggan.</li>
-            <li>Menyiapkan dan mengembangkan Tenaga kerja yang memiliki integritas, andal dan profesional.</li>
-          </ul>
+          <h3 id="mission-subtitle" class="text-xl font-semibold mb-4"></h3>
+          <ul id="mission-list" class="list-disc ml-5 text-gray-700 space-y-2"></ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Tabs -->
-  <section id="services">
-    <div class="container">
-      <h2 id="service-title">Layanan Kami</h2>
-      <div class="tabs">
-        <button onclick="showService('business')" class="tab-btn active">Business Support</button>
-        <button onclick="showService('recruitment')" class="tab-btn">Recruitment</button>
-        <button onclick="showService('training')" class="tab-btn">Training</button>
-        <button onclick="showService('event')" class="tab-btn">Event Management</button>
+  <!-- Services -->
+  <section id="services" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 id="service-title" class="text-3xl font-semibold text-center mb-10"></h2>
+      <div class="flex flex-wrap justify-center mb-6 space-x-0 md:space-x-4 space-y-2 md:space-y-0">
+        <button onclick="showService('business')" class="service-tab active:bg-blue-600 bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition w-full md:w-auto">Business Support</button>
+        <button onclick="showService('recruitment')" class="service-tab bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition w-full md:w-auto">Recruitment</button>
+        <button onclick="showService('training')" class="service-tab bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition w-full md:w-auto">Training</button>
+        <button onclick="showService('event')" class="service-tab bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition w-full md:w-auto">Event Management</button>
       </div>
-      <div id="service-content">
+
+      <div id="service-content" class="bg-gray-50 p-6 rounded-lg shadow-md mt-4">
         <div id="business" class="service-detail">
-          <h3 id="business-title">Business Support</h3>
-          <p id="business-desc">Kami menyediakan SDM terbaik dan berpengalaman di bidangnya melalui proses rekrutmen dan seleksi yang cepat untuk mendukung operasional bisnis Anda.</p>
-          <ul id="business-list">
-            <li>Komunikasi Pemasaran</li>
-            <li>Sales Force</li>
-            <li>Staff Perkantoran</li>
-            <li>Staff Forwarding</li>
-            <li>Staff Administrasi</li>
-            <li>Receptionist</li>
-            <li>Driver</li>
-            <li>DLL</li>
-          </ul>
+          <h3 id="business-title" class="text-xl font-semibold mb-3"></h3>
+          <p id="business-desc" class="mb-4"></p>
+          <ul id="business-list" class="list-disc ml-6 space-y-1 text-gray-700"></ul>
         </div>
         <div id="recruitment" class="service-detail hidden">
-          <h3 id="recruitment-title">Recruitment</h3>
-          <p id="recruitment-desc">Fokus pada pencarian karyawan untuk posisi non-management guna membantu perusahaan menjalankan aturan dan prosedur internal.</p>
-          <ul id="recruitment-list">
-            <li>Identifikasi kebutuhan posisi</li>
-            <li>Membuat strategi perekrutan</li>
-            <li>Publikasi lowongan pekerjaan</li>
-            <li>Screening, Test & Interview</li>
-            <li>Shortlist & Offering</li>
-          </ul>
+          <h3 id="recruitment-title" class="text-xl font-semibold mb-3"></h3>
+          <p id="recruitment-desc" class="mb-4"></p>
+          <ul id="recruitment-list" class="list-disc ml-6 space-y-1 text-gray-700"></ul>
         </div>
         <div id="training" class="service-detail hidden">
-          <h3 id="training-title">Training</h3>
-          <p id="training-desc">Menyediakan program pelatihan untuk membangun dan mengembangkan bakat tim Anda dengan instruktur kompeten.</p>
-          <ul id="training-list">
-            <li>Inhouse / Exhouse Training</li>
-            <li>Training Skill & Motivation</li>
-            <li>Supervisory Management</li>
-            <li>Outdoor Training (Outbond)</li>
-            <li>Employee Gathering</li>
-          </ul>
+          <h3 id="training-title" class="text-xl font-semibold mb-3"></h3>
+          <p id="training-desc" class="mb-4"></p>
+          <ul id="training-list" class="list-disc ml-6 space-y-1 text-gray-700"></ul>
         </div>
         <div id="event" class="service-detail hidden">
-          <h3 id="event-title">Event Management</h3>
-          <p id="event-desc">Merancang dan melaksanakan setiap event Anda dengan dedikasi tinggi untuk menciptakan pengalaman luar biasa bagi peserta.</p>
-          <ul id="event-list">
-            <li>MICE (Meeting, Incentive, Convention, Exhibition)</li>
-            <li>Brand Activation</li>
-            <li>Product Launching</li>
-            <li>Gathering</li>
-            <li>Field of Officer Boy</li>
-            <li>Sales Promotion Girl/Boy</li>
-          </ul>
+          <h3 id="event-title" class="text-xl font-semibold mb-3"></h3>
+          <p id="event-desc" class="mb-4"></p>
+          <ul id="event-list" class="list-disc ml-6 space-y-1 text-gray-700"></ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Process -->
-  <section id="process">
-    <div class="container">
-      <h2 id="process-title">Proses Kami</h2>
-      <p id="process-subtitle">Proses kerja kami dilakukan secara sistematis untuk memastikan kualitas layanan tetap tinggi.</p>
-      <div class="steps">
-        <div data-aos="fade-up" class="step">
-          <span class="step-number">1</span>
-          <h3 id="step1-title">Recruitment & Assessment</h3>
-          <p id="step1-desc">Identifikasi kebutuhan tenaga kerja dan evaluasi calon pelamar melalui seleksi kompetensi.</p>
+  <!-- Process -->
+  <section id="process" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 id="process-title" class="text-3xl font-semibold text-center mb-4"></h2>
+      <p id="process-subtitle" class="text-center text-gray-600 mb-10 max-w-xl mx-auto"></p>
+
+      <div class="relative">
+        <div class="absolute left-6 top-0 bottom-0 w-1 bg-blue-400 hidden md:block"></div>
+
+        <div data-aos="fade-left" class="mb-10 md:ml-16 relative">
+          <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
+            <span class="absolute -left-10 top-6 bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">1</span>
+            <h3 id="step1-title" class="text-xl font-semibold mb-2"></h3>
+            <p id="step1-desc"></p>
+          </div>
         </div>
-        <div data-aos="fade-up" class="step">
-          <span class="step-number">2</span>
-          <h3 id="step2-title">Training</h3>
-          <p id="step2-desc">Pelatihan awal untuk mempersiapkan HR sesuai standar perusahaan mitra.</p>
+
+        <div data-aos="fade-left" class="mb-10 md:ml-16 relative">
+          <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
+            <span class="absolute -left-10 top-6 bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">2</span>
+            <h3 id="step2-title" class="text-xl font-semibold mb-2"></h3>
+            <p id="step2-desc"></p>
+          </div>
         </div>
-        <div data-aos="fade-up" class="step">
-          <span class="step-number">3</span>
-          <h3 id="step3-title">Placement & Service Delivery</h3>
-          <p id="step3-desc">Penempatan tenaga kerja sesuai kebutuhan dan penyerahan laporan hasil seleksi kepada klien.</p>
+
+        <div data-aos="fade-left" class="mb-10 md:ml-16 relative">
+          <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
+            <span class="absolute -left-10 top-6 bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">3</span>
+            <h3 id="step3-title" class="text-xl font-semibold mb-2"></h3>
+            <p id="step3-desc"></p>
+          </div>
         </div>
-        <div data-aos="fade-up" class="step">
-          <span class="step-number">4</span>
-          <h3 id="step4-title">Mentoring</h3>
-          <p id="step4-desc">Pendampingan selama masa adaptasi untuk memastikan pekerjaan berjalan lancar.</p>
+
+        <div data-aos="fade-left" class="mb-10 md:ml-16 relative">
+          <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
+            <span class="absolute -left-10 top-6 bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">4</span>
+            <h3 id="step4-title" class="text-xl font-semibold mb-2"></h3>
+            <p id="step4-desc"></p>
+          </div>
         </div>
-        <div data-aos="fade-up" class="step">
-          <span class="step-number">5</span>
-          <h3 id="step5-title">Development</h3>
-          <p id="step5-desc">Pengembangan skill dan kapasitas tenaga kerja untuk meningkatkan produktivitas jangka panjang.</p>
+
+        <div data-aos="fade-left" class="mb-10 md:ml-16 relative">
+          <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
+            <span class="absolute -left-10 top-6 bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">5</span>
+            <h3 id="step5-title" class="text-xl font-semibold mb-2"></h3>
+            <p id="step5-desc"></p>
+          </div>
         </div>
-        <div data-aos="fade-up" class="step">
-          <span class="step-number">6</span>
-          <h3 id="step6-title">Performance Evaluation</h3>
-          <p id="step6-desc">Evaluasi berkala terhadap kinerja tenaga kerja untuk menjamin kualitas layanan tetap tinggi.</p>
+
+        <div data-aos="fade-left" class="mb-10 md:ml-16 relative">
+          <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
+            <span class="absolute -left-10 top-6 bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">6</span>
+            <h3 id="step6-title" class="text-xl font-semibold mb-2"></h3>
+            <p id="step6-desc"></p>
+          </div>
         </div>
-        <div data-aos="fade-up" class="step">
-          <span class="step-number">7</span>
-          <h3 id="step7-title">Termination or Renewal</h3>
-          <p id="step7-desc">Opsi pembaruan kontrak atau pengakhiran kerjasama sesuai kebutuhan klien.</p>
+
+        <div data-aos="fade-left" class="mb-10 md:ml-16 relative">
+          <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
+            <span class="absolute -left-10 top-6 bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">7</span>
+            <h3 id="step7-title" class="text-xl font-semibold mb-2"></h3>
+            <p id="step7-desc"></p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Clients Section -->
-  <section id="clients">
-    <div class="container">
-      <h2 id="client-title">Klien & Event Kami</h2>
-      <p id="client-desc">Beberapa mitra yang telah mempercayakan kebutuhan SDM kepada kami.</p>
-      <div class="client-slider animate-scroll">
-        <div class="client-slide">HKTI</div>
-        <div class="client-slide"><img src="https://picsum.photos/id/1011/150/80 " alt="Client 1"></div>
-        <div class="client-slide"><img src="https://picsum.photos/id/1012/150/80 " alt="Client 2"></div>
-        <div class="client-slide"><img src="https://picsum.photos/id/1013/150/80 " alt="Client 3"></div>
-        <div class="client-slide"><img src="https://picsum.photos/id/1014/150/80 " alt="Client 4"></div>
-        <div class="client-slide">IFW</div>
+  <!-- Clients -->
+  <section id="clients" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 id="client-title" class="text-3xl font-semibold text-center mb-6"></h2>
+      <p id="client-desc" class="text-center text-gray-600 mb-6"></p>
+      <div class="client-slider overflow-hidden whitespace-nowrap animate-scroll">
+        <div class="client-slide inline-block">HKTI</div>
+        <div class="client-slide inline-block"><img src="https://picsum.photos/id/1011/150/80 " alt="Client 1" class="w-full h-full object-cover"></div>
+        <div class="client-slide inline-block"><img src="https://picsum.photos/id/1012/150/80 " alt="Client 2" class="w-full h-full object-cover"></div>
+        <div class="client-slide inline-block"><img src="https://picsum.photos/id/1013/150/80 " alt="Client 3" class="w-full h-full object-cover"></div>
+        <div class="client-slide inline-block"><img src="https://picsum.photos/id/1014/150/80 " alt="Client 4" class="w-full h-full object-cover"></div>
+        <div class="client-slide inline-block">IFW</div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2 id="contact-title">Kontak Kami</h2>
-      <div class="contact-info">
-        <p id="address-label"><strong>Alamat:</strong> Plaza Summarecon Bekasi Lt. 7, Jl. Ahmad Yani Bulevar, Sentra Summarecon - Bekasi</p>
-        <p id="phone-label"><strong>Telepon:</strong> +62 852 7222 2277</p>
-        <p id="email-label"><strong>Email:</strong> admin@perdana.co.id</p>
-        <p id="contact-info">Silakan isi form di samping untuk menghubungi kami.</p>
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 id="contact-title" class="text-3xl font-semibold text-center mb-10"></h2>
+      <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 id="contact-subtitle" class="text-xl font-semibold mb-4"></h3>
+            <p id="address-label" class="mb-2"></p>
+            <p id="phone-label" class="mb-2"></p>
+            <p id="email-label"></p>
+            <p class="mt-4 text-sm text-gray-600" id="contact-info"></p>
+          </div>
+          <div>
+            <iframe 
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfYOUR_FORM_ID/viewform?embedded=true " 
+              width="100%" 
+              height="400" 
+              frameborder="0" 
+              marginheight="0" 
+              marginwidth="0"
+              class="rounded-lg"
+            >Loading…</iframe>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p id="footer-copyright">&copy; 2025 PT. Perdana Adi Yuda. All rights reserved.</p>
-      <p id="footer-address">Plaza Summarecon Bekasi Lt. 7, Jl. Ahmad Yani Bulevar, Sentra Summarecon - Bekasi</p>
-    </div>
+  <footer class="bg-blue text-white p-6 text-center">
+    <p id="footer-copyright"></p>
+    <p class="text-sm mt-2" id="footer-address"></p>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- Language Switcher -->
+  <div class="text-right p-2 fixed bottom-4 right-4 z-50">
+    <button onclick="switchLang('id')" class="mx-1 px-3 py-1 bg-blue-100 text-blue-700 rounded">ID</button>
+    <button onclick="switchLang('en')" class="mx-1 px-3 py-1 bg-blue-600 text-white rounded">EN</button>
+  </div>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
